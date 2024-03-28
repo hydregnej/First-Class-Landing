@@ -6,8 +6,10 @@ run-server:
 
 install:
 	@echo "Installing dep..."
+	@sudo apt install poetry
 	@poetry shell
 	@poetry install
+	@poetry update
 	@sudo apt-get update
 	@poetry lock
 
