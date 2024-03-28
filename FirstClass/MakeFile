@@ -1,11 +1,8 @@
-.PHONY: run-server clean install migrate
+.PHONY: run-server clean install
 
 run-server:
 	@echo "Starting server..."
 	@python manage.py runserver
-
-migrate:
-	@poetry run alembic upgrade head
 
 install:
 	@echo "Installing dep..."
