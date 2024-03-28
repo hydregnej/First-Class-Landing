@@ -2,11 +2,11 @@
 
 run-server:
 	@echo "Starting server..."
-	@python manage.py runserver
+	@python backend/manage.py runserver
 
 install:
 	@echo "Installing dep..."
-	@sudo apt install poetry
+	@pip install poetry
 	@poetry shell
 	@poetry install
 	@poetry update
