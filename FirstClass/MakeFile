@@ -1,0 +1,19 @@
+run-server:
+	@echo "Starting server..."
+	python manage.py runserver
+
+
+migrate:
+	@echo "Applying database migrations..."
+	@poetry run alembic upgrade head
+	@echo "Migrations applied successfully."
+
+install:
+	@echo "Installing dep..."
+	@poetry install
+	@sudo apt-get update && sudo apt-get install ffmpeg libsm6 libxext6  -y
+	@poetry lock
+
+clean:
+	@echo "Removing lock..."
+	@rm poetry.lock

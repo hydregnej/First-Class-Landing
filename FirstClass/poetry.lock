@@ -13,6 +13,14 @@ typing-extensions = {version = ">=4", markers = "python_version < \"3.11\""}
 tests = ["pytest", "pytest-asyncio", "mypy (>=0.800)"]
 
 [[package]]
+name = "asyncio"
+version = "3.4.3"
+description = "reference implementation of PEP 3156"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "atomicwrites"
 version = "1.4.1"
 description = "Atomic file writes."
@@ -207,10 +215,11 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "59a15858261d9fb1e1e029d631fdacdc21b3b38e6d9fb8b760c515dbc154445c"
+content-hash = "12c7aa80923c6d274f75ad3e12cc8165773d06ce3ec88a206d013bf5acc5fcb8"
 
 [metadata.files]
 asgiref = []
+asyncio = []
 atomicwrites = []
 attrs = []
 colorama = []
