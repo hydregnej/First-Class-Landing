@@ -9,6 +9,7 @@ python = "^3.10"
 Django = "^5.0.3"
 SQLAlchemy = "^2.0.29"
 asyncio = "^3.4.3"
+psycopg2-binary = "^2.9.9"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
