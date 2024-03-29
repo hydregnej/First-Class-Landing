@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "smileai"
+      POSTGRES_USER: "postres"
+      POSTGRES_PASSWORD: "postres"
+    ports:
+      - 8083:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data:cached
+
+  redis:
+    container_name: redis
+    image: redis:6.2-alpine
+
+volumes:
+  db_data:
