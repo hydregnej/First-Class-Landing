@@ -2,7 +2,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from .mixin import IsActiveMixin, CreationDateMixin
 from ..database.database_metadata import Base
 
-class ClientORM(Base, CreationDateMixin, IsActiveMixin):
+class Client(Base, CreationDateMixin, IsActiveMixin):
     __tablename__ = "clients"
 
     id: Mapped[int] = mapped_column(primary_key=True)
