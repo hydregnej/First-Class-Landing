@@ -1,4 +1,4 @@
-.PHONY: run-server clean install
+.PHONY: run-server clean install docker
 
 run-server:
 	@echo "Starting server..."
@@ -16,3 +16,6 @@ install:
 clean:
 	@echo "Removing lock..."
 	@rm poetry.lock
+
+docker: 
+    @docker-compose up --build -d
