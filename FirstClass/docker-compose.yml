@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres:13.3
     environment:
-      POSTGRES_DB: "smileai"
+      POSTGRES_DB: "firstclass"
       POSTGRES_USER: "postres"
       POSTGRES_PASSWORD: "postres"
     ports:
