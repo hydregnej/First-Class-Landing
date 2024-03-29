@@ -7,10 +7,15 @@ services:
       POSTGRES_DB: "firstclass"
       POSTGRES_USER: "postres"
       POSTGRES_PASSWORD: "postres"
+    container_name: pgdb
     ports:
       - 8083:5432
     volumes:
       - db_data:/var/lib/postgresql/data:cached
+
+  redis:
+    container_name: redis
+    image: redis:6.2-alpine
 
 volumes:
   db_data:
