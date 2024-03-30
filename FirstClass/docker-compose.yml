@@ -13,9 +13,5 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data:cached
 
-  redis:
-    container_name: redis1
-    image: redis:6.2-alpine
-
 volumes:
   db_data:
