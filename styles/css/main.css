@@ -1,0 +1,49 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/* Начало Андрей */
+.header {
+  margin-top: 51px;
+}
+.header__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+}
+.header__nav {
+  display: flex;
+  gap: 72px;
+  margin: 0 255px 0 273px;
+}
+.header__nav-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__btn {
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 28px;
+  width: 133px;
+  height: 45px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+.main__h1 {
+  /* text-align: center; */
+  margin: 205px 0 1463px 200px;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 130%;
+}
+/* Конец Андрей */
