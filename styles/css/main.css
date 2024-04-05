@@ -1,0 +1,65 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* код Вики */
+.section-why {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-why::after {
+  content: "";
+  position: absolute;
+  background-image: url("/img/why-temple-front.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 186px;
+  left: 374px;
+}
+
+.section-why::before {
+  content: "";
+  position: absolute;
+  background-image: url("/img/why-temple-back.png");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 341px;
+  left: 607px;
+}
+
+.section-why__heading {
+  text-align: center;
+  height: 113px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.section-why__list {
+  margin-top: 127px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-why__list__left {
+  gap: 93px;
+}
+
+.section-why__list__left__item {
+  height: 217px;
+}
+
+.section-why__list__right {
+  gap: 93px;
+}
+
+.section-why__list__right__item {
+  height: 217px;
+}
+/* код Вики */
