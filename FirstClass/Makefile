@@ -18,4 +18,4 @@ clean:
 	@rm poetry.lock
 
 docker: 
-	@docker-compose up --build -d
+	@sudo docker-compose up --build -d
