@@ -38,4 +38,5 @@ docker:
 	sudo chmod +x /usr/local/bin/docker-compose
 	sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
+dockerup:
 	@sudo docker-compose up --build -d
