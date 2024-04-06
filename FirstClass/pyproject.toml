@@ -12,6 +12,7 @@ asyncio = "^3.4.3"
 psycopg2-binary = "^2.9.9"
 pydantic = "^2.6.4"
 pydantic-settings = "^2.2.1"
+django-rest = "^0.8.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
