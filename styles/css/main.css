@@ -1,110 +1,793 @@
+* {
+  box-sizing: border-box;
+  font-family: "MontserratAlternates Regular", sans-serif;
+}
+
 .container {
-  max-width: 1280px;
+  max-width: 1120px;
   margin: 0 auto;
+  padding: 0 20px;
 }
-/* Начало Андрей */
+
+/*ВИКА: первый фрейм + хедер*/
 .header {
-  margin-top: 51px;
+  position: relative;
 }
+
+.header-background::after {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 159px;
+  z-index: -2;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(43, 100, 42, 0.6) 53.44%,
+    rgba(115, 115, 115, 0) 100%
+  );
+}
+
+.header__logo {
+  width: 150px;
+  cursor: pointer;
+}
+
 .header__inner {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }
-.header__logo {
-}
+
 .header__nav {
   display: flex;
   gap: 72px;
-  margin: 0 255px 0 273px;
 }
+
 .header__nav-link {
-  font-weight: 700;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 120%;
-  color: black;
+  color: white;
   text-decoration: none;
-  text-transform: uppercase;
 }
+
 .header__btn {
   outline: none;
   border: none;
   border-radius: 7px;
   padding: 10px 28px;
-  width: 133px;
   height: 45px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: #698252;
   font-weight: 700;
   font-size: 20px;
   line-height: 120%;
+  cursor: pointer;
 }
-.main__h1 {
-  /* text-align: center; */
-  margin: 205px 0 463px 200px;
-  font-weight: 400;
-  font-size: 80px;
-  line-height: 130%;
-}
-/* Конец Андрей */
 
-/* код Вики */
-.section-why {
+.section-heading__block {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 150px);
+}
+
+.heading-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -4;
+}
+
+.section-heading__h1 {
+  width: 60%;
+  height: 332px;
+  margin-top: 34vh;
+  padding-top: 80px;
+  background: linear-gradient(
+    0deg,
+    rgba(43, 100, 42, 0.6),
+    rgba(43, 100, 42, 0.6)
+  );
+  filter: blur(35px);
+}
+
+.section-heading__images {
+  position: absolute;
+  bottom: 0;
+}
+
+.section-heading__img-bg-anime-person {
+  position: absolute;
+  bottom: -2.2vh;
+  left: 27vh;
+  z-index: -2;
+  height: 80vh;
+}
+
+.section-heading__img-lantern {
+  position: absolute;
+  bottom: 34vh;
+  left: 95vh;
+  height: 55vh;
+  z-index: -3;
+  overflow: hidden;
+}
+
+.section-heading__img-leaves-big {
+  position: absolute;
+  bottom: 73vh;
+  left: 80vh;
+  z-index: -3;
+  height: 28vh;
+}
+
+.section-heading__img-leaves-small {
+  position: absolute;
+  z-index: -3;
+  bottom: 90vh;
+  left: 37vh;
+  height: 12vh;
+}
+
+.section-heading-text {
   position: relative;
 }
 
-.section-why::after {
-  content: "";
+.section-heading-text__flex-move {
+  margin-left: 18px;
   position: absolute;
-  background-image: url("/img/why-temple-front.png");
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  top: 186px;
-  left: 374px;
+  display: flex;
+  flex-direction: column;
+  bottom: 6vh;
+  left: 0;
 }
 
-.section-why::before {
-  content: "";
-  position: absolute;
-  background-image: url("/img/why-temple-back.png");
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  top: 341px;
-  left: 607px;
+.js-heading-first-move {
+  font-family: "FoglightenNo06", sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 130%;
+  color: white;
+  text-align: left;
+  width: 430px;
 }
 
-.section-why__heading {
+.js-heading-second-move {
+  font-family: "FoglightenNo06", sans-serif;
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 130%;
+  color: white;
+  text-align: left;
+  text-transform: uppercase;
+  width: 600px;
+}
+
+/*ВИКА: второй фрейм*/
+
+.main__why {
+  color: rgba(233, 231, 222, 1);
+}
+
+.main__why__background {
+  background-color: rgba(40, 57, 44, 1);
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.main__why__heading {
+  padding-top: 101px;
   text-align: center;
-  height: 113px;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 140%;
 }
 
-.section-why__list {
-  margin-top: 127px;
+.main__why__reasons {
+  display: flex;
+  padding: 110px 0 113px 0;
+  gap: 11%;
+  position: relative;
+}
+
+.main__why__reasons-left-side {
+  display: flex;
+  flex-direction: column;
+  margin-left: 124px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+}
+
+.main__why__reason-one {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 25px;
+  width: 38%;
+}
+
+.main__why__reason-two {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 71px 0 0 128px;
+  width: 39%;
+}
+
+.main__why__reason-three {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 40px 0 0 300px;
+}
+
+.main__why__reasons-right-side {
+  display: flex;
+  flex-direction: column;
+  margin-right: 82px;
+  gap: 40px;
+}
+
+.main__why__reason-four {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.main__why__reason-five {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+}
+
+.main__why__two-pandas {
+  position: absolute;
+  left: 400px;
+  top: 48px;
+}
+
+.main__why__one-panda {
+  position: absolute;
+  left: 564px;
+  top: 171px;
+}
+
+/* Начало Андрей */
+.travel-examples-slider {
+  padding: 108px 40px 0 22px;
+  display: flex;
+  background: #e9e7de;
+}
+.travel-examples-slider__container {
+  position: relative;
+  display: flex;
+}
+
+.travel-examples-slider__text-block {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 10px;
+}
+.travel-examples-slider__heading-3 {
+  transform: translate(-365px, 0px);
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 125%;
+}
+.travel-examples-slider__paragraph {
+  transform: translate(-365px, 0px);
+}
+.travel-examples-slider__item {
+  color: white;
+  width: 240px;
+  height: 632px;
+}
+.travel-examples-slider__item-japan {
+  background: url(/img/bg-japan-travel-examples.png) center/cover no-repeat;
+  transform: translate(0px, -288px);
+  opacity: 0;
+}
+.travel-examples-slider__item-india {
+  background: url(/img/bg-india-travel-examples.png) center/cover no-repeat;
+  transform: translate(0px, 288px);
+  opacity: 0;
+}
+.travel-examples-slider__item-china {
+  background: url(/img/bg-china-travel-examples.png) center/cover no-repeat;
+  transform: translate(0px, -288px);
+  opacity: 0;
+}
+.travel-examples-slider__item-south-korea {
+  background: url(/img/bg-south-korea-travel-examples.png) center/cover
+    no-repeat;
+}
+.travel-examples-slider__item-malaysia {
+  background: url(/img/bg-malaysia-travel-examples.png) center/cover no-repeat;
+}
+.travel-examples-slider__item-dubai {
+  background: url(/img/bg-dubai-travel-examples.png) center/cover no-repeat;
+}
+.travel-examples-slider__text-in-slider {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 413px 23px 0 23px;
+  gap: 23px;
+}
+
+.travel-examples-slider__heading-4 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 119%;
+}
+.travel-examples-slider__paragraph-in-slider {
+  word-wrap: break-word;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: left;
+  width: 155px;
+}
+.travel-examples-slider-button {
+  transform: translateY(-50%);
+  width: 77px;
+  height: 77px;
+  opacity: 0.6;
+}
+.travel-examples-slider-button:hover {
+  opacity: 0.8;
+}
+.travel-examples-slider-button:active {
+  opacity: 1;
+}
+.travel-examples-slider__prev {
+  left: 203px;
+  top: 310px;
+}
+.travel-examples-slider__next {
+  left: 1141px;
+  top: 310px;
+}
+.reviews-slider {
+  padding: 250px 0 200px 0;
+  background: #e9e7de;
+}
+.reviews-slider__container {
+  position: relative;
+}
+.reviews-slider__swiper {
+  width: 653px;
+  height: 390px;
+  color: #28392c;
+}
+
+.reviews-slider__swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+}
+.reviews-slider__user-name-and-rating {
+  width: 376px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 11px;
+  color: #e9e7de;
+  background-color: #28392c;
+  border-radius: 34px;
+  padding: 12px 0 8px 0;
+}
+.reviews-slider__text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+/* Использовал ID, по другому приоритет библиотеки перебивал мой стиль */
+#reviews-slider__swiper-pagination {
+  bottom: -30px;
+}
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #28392c;
+}
+.reviews-slider-button {
+  transform: translateY(-50%);
+  width: 77px;
+  height: 77px;
+  opacity: 0.6;
+}
+.reviews-slider-button:hover {
+  opacity: 0.8;
+}
+.reviews-slider-button:active {
+  opacity: 1;
+}
+
+.reviews-slider__prev {
+  left: 85px;
+  top: 310px;
+}
+.reviews-slider__next {
+  left: 958px;
+  top: 310px;
+}
+/* Конец Андрей */
+
+/*ДАНЯ: ФРЕЙМ 5 НАЧАЛО */
+.main__want-here {
+  position: relative;
+  padding: 63px 0 142px;
+  overflow: hidden;
+}
+
+.main__want-here__heading {
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 48px;
+}
+
+.main__want-here__sliders {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main__want-here__slide.js-main__want-here__active {
+  display: flex;
+}
+
+.main__want-here__slide {
+  margin-top: 60px;
+  display: none;
+  justify-content: center;
+  border-radius: 46px;
+  width: 535px;
+  height: 545px;
+  background: rgba(212, 212, 212, 0.62);
+}
+
+.main__want-here__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -10;
+}
+
+.main__want-here__map {
+  padding-left: 30px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+.main__want-here__map-europe {
+  margin-top: 65px;
+}
+
+.main__want-here__map-africa {
+  margin-top: 85px;
+}
+
+.main__want-here__text {
+  position: absolute;
+  font-size: 48px;
+  color: rgba(40, 57, 44, 1);
+  font-weight: 700;
+  bottom: 200px;
+}
+
+.main__want-here__rout {
+  position: absolute;
+  bottom: 400px;
+}
+
+.main__want-here__button {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  margin-top: 320px;
+}
+
+.main__want-here__button-prev {
+  margin-right: 600px;
+}
+
+.main__want-here__button-prev:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.main__want-here__button-next:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+/* ДАНЯ: ФРЕЙМ 5 КОНЕЦ */
+
+/* ДАНЯ: ФРЕЙМ 6 НАЧАЛО */
+.main__inspiring-stories {
+  padding: 130px 0 130px;
+  position: relative;
+}
+
+.main__inspiring-stories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 450px;
+  background-color: #ebe7dc;
+  z-index: -1;
+}
+
+.main__inspiring-stories__heading {
+  color: rgba(40, 57, 44, 1);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.main__inspiring-stories__blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  gap: 40px;
+}
+
+.main__inspiring-stories__block {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main__inspiring-stories__item {
+  display: flex;
+  justify-content: center;
+}
+
+.main__inspiring-stories__image {
+  width: 90%;
+}
+
+.main__inspiring-stories__text {
+  padding: 0 0 0 25px;
+  color: rgba(40, 57, 44, 1);
+  font-family: "MontserratAlternates Bold";
+  position: absolute;
+  bottom: 85px;
+  font-weight: 700;
+  font-size: 22px;
+  width: 90%;
+  line-height: 120%;
+  z-index: 2;
+}
+
+.main__inspiring-stories__color {
+  position: absolute;
+  width: 90%;
+  height: 250px;
+  bottom: 0;
+  background: rgba(235, 231, 220, 0.7);
+  z-index: 1;
+}
+/* ДАНЯ: ФРЕЙМ 6 КОНЕЦ */
+
+/* ВИКА: седьмой фрейм */
+
+.main__feedback__background {
+  background-image: url("/img/clouds_new.gif");
+  height: 1332px;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+}
+
+.main__feedback__inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__feedback__heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 60px;
+  text-align: center;
+  color: rgba(40, 57, 44, 1);
+  margin-top: 890px;
+}
+
+.main__feedback__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__feedback__form__user-inputs {
   display: flex;
   flex-direction: row;
+  margin-top: 57px;
+  width: 75%;
   justify-content: space-between;
 }
 
-.section-why__list__left {
-  gap: 93px;
+.main__feedback__form__user-inputs__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 47%;
 }
 
-.section-why__list__left__item {
-  height: 217px;
+.main__feedback__form__user-inputs__right {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  width: 47%;
 }
 
-.section-why__list__right {
-  gap: 93px;
+.main__feedback__form__button {
+  background: rgba(40, 57, 44, 1);
+  height: 3.4rem;
+  border-radius: 30px;
+  width: 50%;
+  border-color: transparent;
+  color: rgba(233, 231, 222, 1);
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 26px;
 }
 
-.section-why__list__right__item {
-  height: 217px;
+.main__feedback__form__input {
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(233, 231, 222, 1);
+  padding: 18px 0 18px 36px;
 }
-/* код Вики */
+
+.main__feedback__form__input::placeholder {
+  color: rgba(40, 57, 44, 1);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.main__feedback__form__input:focus {
+  outline: none;
+}
+
+/*стилизация чекбокса — начало*/
+
+.main__feedback__form__checkbox {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 18.29px;
+  gap: 12px;
+  padding-left: 70px;
+}
+
+.main__feedback__form__checkbox input {
+  display: none;
+}
+
+.main__feedback__form__checkbox__label {
+  position: relative;
+  cursor: pointer;
+  color: rgba(40, 57, 44, 1);
+  margin-right: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.main__feedback__form__checkbox__label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  background-color: rgba(40, 57, 44, 1);
+  transform: translateY(-50%);
+  width: 23px;
+  height: 21px;
+  border-radius: 5px;
+}
+
+.main__feedback__form__checkbox__label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  background-color: #b8e4b880;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-radius: 4px;
+  transition: width 0.2s, height 0.2s;
+}
+
+.main__feedback__form__checkbox
+  input:checked
+  + .main__feedback__form__checkbox__label::after {
+  content: "\2713";
+  font-size: 14px;
+  line-height: 20px;
+  width: 23px;
+  height: 21px;
+  border-radius: 4px;
+}
+
+/*стилизация чекбокса — конец*/
+
+/* ДАНЯ: ФУТЕР НАЧАЛО */
+.footer {
+  padding: 102px 0 58px 0;
+  color: white;
+  background-color: #283a2c;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 54px 0 54px;
+}
+
+.footer__content {
+  display: flex;
+  gap: 32px;
+}
+
+.footer__title {
+  font-family: "MontserratAlternates Bold";
+}
+
+.footer__list {
+  margin-top: 37px;
+  padding-left: 0;
+}
+
+.footer__item {
+  margin-bottom: 18px;
+  list-style: none;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__socials {
+  margin-top: 68px;
+  text-align: right;
+}
+
+.footer__copyright {
+  display: block;
+}
+
+/* ДАНЯ: ФУТЕР КОНЕЦ */

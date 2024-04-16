@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "FoglightenNo06";
+  src: url("/styles/fonts/FoglihtenNo06_076.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratAlternates Bold";
+  src: url("/styles/fonts/MontserratAlternates-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratAlternates Medium";
+  src: url("/styles/fonts/MontserratAlternates-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MontserratAlternates Regular";
+  src: url("/styles/fonts/MontserratAlternates-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Alternates';
+  src: url('/styles/fonts/MontserratAlternates-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

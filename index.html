@@ -7,95 +7,651 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./styles/css/reset.css" />
-    <link rel="stylesheet" href="./styles/css/main.css" />
     <title>First Class</title>
+    <link rel="stylesheet" href="./styles/css/reset.css" />
+    <link rel="stylesheet" href="./styles/fonts/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/css/main.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="./js/main.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/slider.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <!-- ВИКА: первый фрейм -->
+    <header class="header header-background">
       <div class="container">
         <div class="header__inner">
-          <!-- Начало Андрей -->
           <img
-            src="./icons/logo.svg"
+            src="./icons/logo-animated.gif"
             alt="Логотип First Class"
             class="header__logo"
           />
           <nav class="header__nav">
-            <a href="" class="header__nav-link">Отзывы</a>
-            <a href="" class="header__nav-link">Контакты</a>
-            <a href="" class="header__nav-link">О нас</a>
+            <a href="#" class="header__nav-link">Отзывы</a>
+            <a href="#" class="header__nav-link">Контакты</a>
+            <a href="#" class="header__nav-link">О нас</a>
           </nav>
           <button class="header__btn">Узнать</button>
-          <!-- Конец Андрей -->
-
-          <!-- Начало Вика -->
-          <!-- Конец Вика -->
-
-          <!-- Начало Даня -->
-          <!-- Конец Даня -->
         </div>
       </div>
     </header>
-
     <main class="main">
-      <div class="container">
-        <div class="main__inner">
-          <!-- Начало Андрей -->
-          <h1 class="main__h1">
-            FIRST CLASS - <br />
-            ВАШ ПРЕМИУМ <br />
-            ОТДЫХ
-          </h1>
-          <!-- Конец Андрей -->
-
-          <!-- Начало Вика -->
-          <div class="section-why">
-            <h4 class="section-why__heading">Почему First Class</h4>
-            <div class="section-why__list">
-              <ul class="section-why__list__left">
-                <li class="section-why__list__left__item">
-                  1. Полная анонимность
-                </li>
-                <li class="section-why__list__left__item">
-                  2. Полная анонимность
-                </li>
-              </ul>
-              <ul class="section-why__list__right">
-                <li class="section-why__list__right__item">
-                  3. Полная анонимность
-                </li>
-                <li class="section-why__list__right__item">
-                  4. Полная анонимность
-                </li>
-              </ul>
+      <div class="main__inner">
+        <div class="main__section-heading">
+          <div class="container">
+            <img
+              src="./img/header-bg.jpg"
+              alt=""
+              class="heading-background-image"
+            />
+            <div class="section-heading__block">
+              <div class="section-heading__h1"></div>
+              <div class="section-heading-text">
+                <div class="section-heading-text__flex-move">
+                  <span class="js-heading-first-move">First Class</span>
+                  <span class="js-heading-second-move"
+                    >Ваш премиум <br />
+                    отдых</span
+                  >
+                </div>
+              </div>
+              <div class="section-heading__images">
+                <img
+                  src="./vendor/person.gif"
+                  alt=""
+                  class="section-heading__img-bg-anime-person"
+                />
+                <img
+                  src="./vendor/chinese-lantern.gif"
+                  alt=""
+                  class="section-heading__img-lantern"
+                />
+                <img
+                  src="./vendor/leaves-big.gif"
+                  alt=""
+                  class="section-heading__img-leaves-big"
+                />
+                <img
+                  src="./vendor/leaves-small.gif"
+                  alt=""
+                  class="section-heading__img-leaves-small"
+                />
+              </div>
+              <div class="section-heading__images-blank"></div>
             </div>
           </div>
-          <!-- Конец Вика -->
-
-          <!-- Начало Даня -->
-          <!-- Конец Даня -->
         </div>
+        <!-- ВИКА: первый фрейм, конец -->
+
+        <!-- ВИКА: второй фрейм -->
+        <div class="main__why">
+          <div class="main__why__background">
+            <div class="container">
+              <h1 class="main__why__heading">Почему First class</h1>
+              <div class="main__why__reasons">
+                <div class="main__why__reasons-left-side">
+                  <div class="main__why__reason-one">
+                    <h3 class="main__why__reason-one__heading">
+                      Незабываемые впечатления
+                    </h3>
+                    <p class="main__why__reason-one__paragraph">
+                      Наши специалисты по путешествиям готовы вам помочь на
+                      каждом этапе.
+                    </p>
+                  </div>
+                  <div class="main__why__reason-two">
+                    <h3 class="main__why__reason-two__heading">
+                      Уникальный маршрут
+                    </h3>
+                    <p class="main__why__reason-two__paragraph">
+                      Тщательно подобранный маршрут, по вашим предпочтениям.
+                    </p>
+                  </div>
+                  <div class="main__why__reason-three">
+                    <h3 class="main__why__reason-three__heading">
+                      Полная конфиденциональность
+                    </h3>
+                    <p class="main__why__reason-three__paragraph">
+                      Наша компания обещает полную анонимность для комфортного
+                      отдыха.
+                    </p>
+                  </div>
+                </div>
+                <img
+                  src="./img/two-pandas.png"
+                  alt=""
+                  class="main__why__two-pandas"
+                />
+                <img
+                  src="./img/one-panda.png"
+                  alt=""
+                  class="main__why__one-panda"
+                />
+                <div class="main__why__reasons-right-side">
+                  <div class="main__why__reason-four">
+                    <p class="main__why__reason-four__paragraph">
+                      First class — это премиальная туристическая компания,
+                      рожденная страстью делать все по-другому.
+                    </p>
+                  </div>
+                  <div class="main__why__reason-five">
+                    <p class="main__why__reason-five__paragraph-one">
+                      Название "First Class" означает, что наша компания ставит
+                      интересы своих клиентов в приоритет.
+                    </p>
+                    <p class="main__why__reason-five__paragraph-two">
+                      Наши специалисты по путешествиям готовы вам помочь на
+                      каждом этапе.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ВИКА: второй фрейм, конец -->
+
+        <!-- Начало Андрей. Третий фрейм-->
+        <section class="travel-examples-slider">
+          <div class="container travel-examples-slider__container">
+            <div class="travel-examples-slider">
+              <div class="travel-examples-slider__text-block">
+                <h3 class="travel-examples-slider__heading-3">
+                  Примеры поездок
+                </h3>
+                <p class="travel-examples-slider__paragraph">
+                  Посмотрите наши <br />
+                  примеры поездок <br />
+                  и свяжитесь с нами, <br />
+                  чтобы начать планировать <br />
+                  собственную <br />
+                  поезку
+                </p>
+              </div>
+            </div>
+            <div class="swiper travel-examples-slider-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-japan"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Японию
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Посмотрите прекрасное цветение сакуры
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-india"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Индию
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Познакомьтесь с культурой и яркими цветами Индии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-china"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Китай
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Познакомьтесь с уникальной природой Китая
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-south-korea"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Корею
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Восхититесь местами Южной Кореи
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-malaysia"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Малайзию
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Посмотрите на устрашающего Дракона в Малайзии
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div
+                    class="travel-examples-slider__item travel-examples-slider__item-dubai"
+                  >
+                    <div class="travel-examples-slider__text-in-slider">
+                      <h4 class="travel-examples-slider__heading-4">
+                        Поездка в Дубай
+                      </h4>
+                      <p class="travel-examples-slider__paragraph-in-slider">
+                        Посмотрите и насладитесь самым богатым городом мира
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              src="./icons/slider-prev.svg"
+              alt="Стрелка назад"
+              class="swiper-button-prev travel-examples-slider-button travel-examples-slider__prev"
+            />
+            <img
+              src="./icons/slider-next.svg"
+              alt="Стрелка вперёд"
+              class="swiper-button-next travel-examples-slider-button travel-examples-slider__next"
+            />
+          </div>
+        </section>
+        <!-- Конец Андрей. Третий фрейм-->
+
+        <!-- Начало Андрей. Четвёртый фрейм-->
+        <section class="reviews-slider">
+          <div class="container reviews-slider__container">
+            <div class="swiper reviews-slider__swiper">
+              <div class="swiper-wrapper reviews-slider__swiper-wrapper">
+                <div class="swiper-slide reviews-slider__swiper-slide">
+                  <h2 class="reviews-slider__h2">Отзывы</h2>
+                  <div class="reviews-slider__user-name-and-rating">
+                    <p class="reviews-slider__text">Ирина К.</p>
+                    <img
+                      src="./icons/rating-rew.svg"
+                      alt="Оценка пользователя"
+                    />
+                  </div>
+                  <h3 class="reviews-slider__h3">Чудесная поездка в Китай</h3>
+                  <p class="reviews-slider__text">
+                    Отлично организованная поездка для всей семьи! Богатая
+                    история, захватывающие достопримечательности, вкуснейшая
+                    кухня и гостеприимные люди – все это создало неповторимую
+                    атмосферу. Посещение Великой Китайской стены было поистине
+                    впечатляющим. Вид и размеры удивляют и впечатляют своей
+                    мощью.
+                  </p>
+                </div>
+                <div class="swiper-slide reviews-slider__swiper-slide">
+                  <h2 class="reviews-slider__h2">Отзывы</h2>
+                  <div class="reviews-slider__user-name-and-rating">
+                    <p class="reviews-slider__text">Олег Р.</p>
+                    <img
+                      src="./icons/rating-rew.svg"
+                      alt="Оценка пользователя"
+                    />
+                  </div>
+                  <h3 class="reviews-slider__h3">Цветение сакуры в Японии</h3>
+                  <p class="reviews-slider__text">
+                    Лучшая поездка в моей жизни! Поездка в Японию оказалась
+                    незабываемым приключением! Богатая история, захватывающие
+                    достопримечательности, вкуснейшая кухня и гостеприимные люди
+                    – все это создало неповторимую атмосферу. Цветение сакуры
+                    было поистине впечатляющим.
+                  </p>
+                </div>
+                <div class="swiper-slide reviews-slider__swiper-slide">
+                  <h2 class="reviews-slider__h2">Отзывы</h2>
+                  <div class="reviews-slider__user-name-and-rating">
+                    <p class="reviews-slider__text">Эльвира Б.</p>
+                    <img
+                      src="./icons/rating-rew.svg"
+                      alt="Оценка пользователя"
+                    />
+                  </div>
+                  <h3 class="reviews-slider__h3">Шикарный отдых в Дубае</h3>
+                  <p class="reviews-slider__text">
+                    Дубай - город мечты. Поездка в Дубай оказалась незабываемым
+                    приключением! Захватывающие достопримечательности,
+                    вкуснейшая кухня и гостеприимные люди – все это создало
+                    неповторимую атмосферу. Очень хотелось бы вернуться вместе с
+                    друзьями этой осенью. Спасибо First class за организацию!!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-pagination"
+              id="reviews-slider__swiper-pagination"
+            ></div>
+            <img
+              src="./icons/slider-prev.svg"
+              alt="Стрелка назад"
+              class="swiper-button-prev reviews-slider-button reviews-slider__prev"
+            />
+            <img
+              src="./icons/slider-next.svg"
+              alt="Стрелка вперёд"
+              class="swiper-button-next reviews-slider-button reviews-slider__next"
+            />
+          </div>
+        </section>
+        <!-- Конец Андрей. Четвёртый фрейм-->
+
+        <!-- ДАНЯ: ФРЕЙМ 5 НАЧАЛО -->
+        <div class="main__want-here">
+          <div class="main__want-here__container container">
+            <h1 class="main__want-here__heading">Хочу сюда</h1>
+            <div class="main__want-here__sliders">
+              <div class="main__want-here__button">
+                <img
+                  class="main__want-here__button-prev js-main__want-here__button-prev"
+                  src="./icons/Prev.svg"
+                  alt="Предыдущий слайд"
+                />
+                <img
+                  class="main__want-here__button-next js-main__want-here__button-next"
+                  src="./icons/Next.svg"
+                  alt="Следующий слайд"
+                />
+              </div>
+              <!-- Азия -->
+              <div class="main__want-here__slide js-main__want-here__slide">
+                <div
+                  class="main__want-here__background js-main__want-here__background"
+                  style="background-image: url('/img/Азия.jpg')"
+                ></div>
+                <img
+                  class="main__want-here__map"
+                  src="./img/Азия карта.svg"
+                  alt="Азия карта"
+                />
+                <img
+                  class="main__want-here__rout"
+                  src="./img/Маршрут.svg"
+                  alt="Маршрут"
+                />
+                <span class="main__want-here__text">Азия</span>
+              </div>
+              <!-- Европа -->
+              <div class="main__want-here__slide js-main__want-here__slide">
+                <div
+                  class="main__want-here__background js-main__want-here__background"
+                  style="background-image: url('/img/Европа.jpg')"
+                ></div>
+                <img
+                  class="main__want-here__map main__want-here__map-europe"
+                  src="./img/Европа карта.svg"
+                  alt="Европа карта"
+                />
+                <img
+                  class="main__want-here__rout"
+                  src="./img/Маршрут.svg"
+                  alt="Маршрут"
+                />
+                <span class="main__want-here__text">Европа</span>
+              </div>
+              <!-- Африка -->
+              <div class="main__want-here__slide js-main__want-here__slide">
+                <div
+                  class="main__want-here__background js-main__want-here__background"
+                  style="background-image: url('/img/Африка.jpg')"
+                ></div>
+                <img
+                  class="main__want-here__map main__want-here__map-africa"
+                  src="./img/Африка карта.svg"
+                  alt="Африка карта"
+                />
+                <img
+                  class="main__want-here__rout"
+                  src="./img/Маршрут.svg"
+                  alt="Маршрут"
+                />
+                <span class="main__want-here__text">Африка</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ДАНЯ: ФРЕЙМ 5 КОНЕЦ -->
+
+        <!-- ДАНЯ: ФРЕЙМ 6 НАЧАЛО -->
+        <div class="main__inspiring-stories">
+          <div class="main__inspiring-stories__container container">
+            <h1
+              class="main__inspiring-stories__heading js-main__inspiring-stories__heading"
+            >
+              Вдохновляющие истории
+            </h1>
+            <div class="main__inspiring-stories__blocks">
+              <div class="main__inspiring-stories__block">
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Китайская чайная церемония</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Китайская церемония.jpg"
+                    alt="Китайская церемония"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Храмы Южной Кореи</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Храм Южной Кореи.jpg"
+                    alt="Храм Южной Кореи"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Прекрасные виды Японии</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Япония у Фудзи.jpg"
+                    alt="Япония у Фудзи"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+              </div>
+              <div class="main__inspiring-stories__block">
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Величественный Будда</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Будда.jpg"
+                    alt="Будда"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Индийский Тадж-Махал</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Тадж-Махал.jpg"
+                    alt="Тадж-Махал"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+                <div
+                  class="main__inspiring-stories__item js-main__inspiring-stories__item"
+                >
+                  <span
+                    class="main__inspiring-stories__text js-main__inspiring-stories__text"
+                    >Яркие улицы Южной Кореи</span
+                  >
+                  <img
+                    class="main__inspiring-stories__image"
+                    src="./img/Город.jpg"
+                    alt="Город"
+                  />
+                  <div
+                    class="main__inspiring-stories__color js-main__inspiring-stories__color"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ДАНЯ: ФРЕЙМ 6 КОНЕЦ -->
+
+        <!-- ВИКА: седьмой фрейм -->
+        <div class="main__feedback">
+          <div class="main__feedback__background">
+            <div class="container">
+              <div class="main__feedback__inner">
+                <h3 class="main__feedback__heading">
+                  Получите вдохновение<br />на свой почтовый ящик
+                </h3>
+                <div class="main__feedback__form">
+                  <div class="main__feedback__form__user-inputs">
+                    <div class="main__feedback__form__user-inputs__left">
+                      <input
+                        type="text"
+                        placeholder="Имя"
+                        class="main__feedback__form__input"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Фамилия"
+                        class="main__feedback__form__input"
+                      />
+                    </div>
+                    <div class="main__feedback__form__user-inputs__right">
+                      <input
+                        type="tel"
+                        placeholder="Телефон"
+                        class="main__feedback__form__input"
+                      />
+                      <div class="main__feedback__form__checkbox">
+                        <input
+                          class="main__feedback__form__checkbox__input"
+                          type="checkbox"
+                          id="subscribe-checkbox"
+                        />
+                        <label
+                          class="main__feedback__form__checkbox__label"
+                          for="subscribe-checkbox"
+                          >Подписаться на рассылку</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="main__feedback__form__button js-form-submit-button"
+                  >
+                    Отправить
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ВИКА: седьмой фрейм, конец -->
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <!-- Начало Андрей -->
-          <!-- Конец Андрей -->
-
-          <!-- Начало Вика -->
-          <!-- Конец Вика -->
-
-          <!-- Начало Даня -->
-          <!-- Конец Даня -->
+      <!-- ДАНЯ: ФУТЕР НАЧАЛО -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__inner">
+        <a class="footer__logo" href="#"><img src="./icons/Logo First Class.svg" alt="First Class"></a>
+        <div class="footer__content">
+          <div class="footer__content-block">
+            <h5 class="footer__title">Континенты</h2>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Азия</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Африка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Европа</a></li>
+              </ul>
+          </div>
+          <div class="footer__content-block">
+            <h5 class="footer__title">Быстрый доступ</h2>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">Домой</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Обратная связь</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">О нас</a></li>
+              </ul>
+          </div>
+          <div class="footer__content-block">
+            <h5 class="footer__title">Наши контакты</h2>
+              <ul class="footer__list">
+                <li class="footer__item"><a class="footer__link" href="#">+7 121121212</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Info@mail.ru</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Москва, ул. Недвижная 8</a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="footer__socials">
+          <a href="#"><img src="./icons/WhatsApp.svg" alt="WhatsApp"></a>
+          <a href="#"><img src="./icons/Instagram.svg" alt="Instagram"></a>
+          <span class="footer__copyright">Все данные защищены.</span>
         </div>
       </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="./js/gsap.js"></script>
-    <script src="./js/main.js"></script>
+    </div>
+  </footer>
+  <!-- ДАНЯ: ФУТЕР КОНЕЦ -->
   </body>
 </html>
