@@ -784,7 +784,7 @@
 
 .footer__content {
   display: flex;
-  gap: 32px;
+  gap: 64px;
 }
 
 .footer__title {
@@ -792,12 +792,16 @@
 }
 
 .footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   margin-top: 37px;
   padding-left: 0;
 }
 
 .footer__item {
-  margin-bottom: 18px;
+
+  /* margin-bottom: 18px; */
   list-style: none;
 }
 
@@ -823,7 +827,10 @@
 }
 
 .footer__socials {
-  /* margin-top: 68px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 18px;
   text-align: right;
 }
 
