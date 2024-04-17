@@ -283,7 +283,7 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const formData = new FormData(form);
-
+    
     const url = 'http://127.0.0.1:8000/enquires/';
 
     fetch(url, {
