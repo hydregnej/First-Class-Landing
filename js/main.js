@@ -1,30 +1,16 @@
 // ВИКА: первый фрейм
 // анимация лого в хедере
 const headerLogo = document.querySelector(".header__logo");
-const newImageSrc = "./icons/logo-static.svg";
+const newImage = new Image();
+newImage.src = "./icons/logo-static.svg";
 
 function changeLogoToStatic() {
-  loadLogo(newImageSrc)
-    .then((loadedImage) => {
-      headerLogo.src = loadedImage.src;
-    })
-    .catch((error) => {
-      console.error("Ошибка загрузки лого:", error);
-    });
+  headerLogo.src = newImage.src;
 }
 
-function loadLogo(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-    img.src = src;
-  });
-}
-
-setTimeout(() => {
+setTimeout(function () {
   changeLogoToStatic();
-}, 1000);
+}, 750);
 
 // анимация текста в первом фрейме
 const headingAnimationFirst = document.querySelector(".js-heading-first-move");
