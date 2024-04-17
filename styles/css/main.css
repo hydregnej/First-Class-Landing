@@ -22,11 +22,9 @@
   height: 159px;
   z-index: -2;
   top: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(43, 100, 42, 0.6) 53.44%,
-    rgba(115, 115, 115, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(43, 100, 42, 0.6) 53.44%,
+      rgba(115, 115, 115, 0) 100%);
 }
 
 .header__logo {
@@ -107,11 +105,9 @@
   height: 332px;
   margin-top: 34vh;
   padding-top: 80px;
-  background: linear-gradient(
-    0deg,
-    rgba(43, 100, 42, 0.6),
-    rgba(43, 100, 42, 0.6)
-  );
+  background: linear-gradient(0deg,
+      rgba(43, 100, 42, 0.6),
+      rgba(43, 100, 42, 0.6));
   filter: blur(35px);
 }
 
@@ -284,6 +280,7 @@
   display: flex;
   background: #e9e7de;
 }
+
 .travel-examples-slider__container {
   position: relative;
   display: flex;
@@ -295,6 +292,7 @@
   align-self: flex-end;
   gap: 10px;
 }
+
 .travel-examples-slider__heading-3 {
   transform: translate(-365px, 0px);
   font-family: "Montserrat Alternates", sans-serif;
@@ -302,39 +300,47 @@
   font-size: 48px;
   line-height: 125%;
 }
+
 .travel-examples-slider__paragraph {
   transform: translate(-365px, 0px);
 }
+
 .travel-examples-slider__item {
   color: white;
   width: 240px;
   height: 632px;
 }
+
 .travel-examples-slider__item-japan {
   background: url(/img/bg-japan-travel-examples.png) center/cover no-repeat;
   transform: translate(0px, -288px);
   opacity: 0;
 }
+
 .travel-examples-slider__item-india {
   background: url(/img/bg-india-travel-examples.png) center/cover no-repeat;
   transform: translate(0px, 288px);
   opacity: 0;
 }
+
 .travel-examples-slider__item-china {
   background: url(/img/bg-china-travel-examples.png) center/cover no-repeat;
   transform: translate(0px, -288px);
   opacity: 0;
 }
+
 .travel-examples-slider__item-south-korea {
-  background: url(/img/bg-south-korea-travel-examples.png) center/cover
-    no-repeat;
+  background: url(/img/bg-south-korea-travel-examples.png) center/cover no-repeat;
 }
+
 .travel-examples-slider__item-malaysia {
   background: url(/img/bg-malaysia-travel-examples.png) center/cover no-repeat;
 }
+
 .travel-examples-slider__item-dubai {
   background: url(/img/bg-dubai-travel-examples.png) center/cover no-repeat;
 }
+
 .travel-examples-slider__text-in-slider {
   display: flex;
   flex-direction: column;
@@ -348,6 +354,7 @@
   font-size: 32px;
   line-height: 119%;
 }
+
 .travel-examples-slider__paragraph-in-slider {
   word-wrap: break-word;
   font-weight: 700;
@@ -356,33 +363,41 @@
   text-align: left;
   width: 155px;
 }
+
 .travel-examples-slider-button {
   transform: translateY(-50%);
   width: 77px;
   height: 77px;
   opacity: 0.6;
 }
+
 .travel-examples-slider-button:hover {
   opacity: 0.8;
 }
+
 .travel-examples-slider-button:active {
   opacity: 1;
 }
+
 .travel-examples-slider__prev {
   left: 203px;
   top: 310px;
 }
+
 .travel-examples-slider__next {
   left: 1141px;
   top: 310px;
 }
+
 .reviews-slider {
   padding: 250px 0 200px 0;
   background: #e9e7de;
 }
+
 .reviews-slider__container {
   position: relative;
 }
+
 .reviews-slider__swiper {
   width: 653px;
   height: 390px;
@@ -396,6 +411,7 @@
   align-items: center;
   gap: 31px;
 }
+
 .reviews-slider__user-name-and-rating {
   width: 376px;
   display: flex;
@@ -407,31 +423,38 @@
   border-radius: 34px;
   padding: 12px 0 8px 0;
 }
+
 .reviews-slider__text {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
 }
+
 /* Использовал ID, по другому приоритет библиотеки перебивал мой стиль */
 #reviews-slider__swiper-pagination {
   bottom: -30px;
 }
+
 .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
 }
+
 .swiper-pagination-bullet-active {
   background-color: #28392c;
 }
+
 .reviews-slider-button {
   transform: translateY(-50%);
   width: 77px;
   height: 77px;
   opacity: 0.6;
 }
+
 .reviews-slider-button:hover {
   opacity: 0.8;
 }
+
 .reviews-slider-button:active {
   opacity: 1;
 }
@@ -440,10 +463,12 @@
   left: 85px;
   top: 310px;
 }
+
 .reviews-slider__next {
   left: 958px;
   top: 310px;
 }
+
 /* Конец Андрей */
 
 /*ДАНЯ: ФРЕЙМ 5 НАЧАЛО */
@@ -489,6 +514,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -10;
+  animation: scaleAnimation 1s forwards;
 }
 
 .main__want-here__map {
@@ -537,6 +563,16 @@
 .main__want-here__button-next:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 /* ДАНЯ: ФРЕЙМ 5 КОНЕЦ */
@@ -609,6 +645,7 @@
   background: rgba(235, 231, 220, 0.7);
   z-index: 1;
 }
+
 /* ДАНЯ: ФРЕЙМ 6 КОНЕЦ */
 
 /* ВИКА: седьмой фрейм */
@@ -681,6 +718,7 @@
   background: rgba(44, 61, 48);
 
 }
+
 .main__feedback__form__button:active {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.27);
 }
@@ -756,9 +794,7 @@
   transition: width 0.2s, height 0.2s;
 }
 
-.main__feedback__form__checkbox
-  input:checked
-  + .main__feedback__form__checkbox__label::after {
+.main__feedback__form__checkbox input:checked+.main__feedback__form__checkbox__label::after {
   content: "\2713";
   font-size: 14px;
   line-height: 20px;

@@ -194,8 +194,6 @@ function prevButton() {
   }
 
   sliders[currentSlide].classList.add('js-main__want-here__active');
-
-  gsap.fromTo(document.querySelectorAll('.js-main__want-here__background'), { scale: 1 }, { scale: 1.1, duration: 1 });
 }
 
 function nextButton() {
@@ -207,8 +205,6 @@ function nextButton() {
   }
 
   sliders[currentSlide].classList.add('js-main__want-here__active');
-
-  gsap.fromTo(document.querySelectorAll('.js-main__want-here__background'), { scale: 1 }, { scale: 1.1, duration: 1 });
 }
 // ДАНЯ: ФРЕЙМ 5 КОНЕЦ
 
