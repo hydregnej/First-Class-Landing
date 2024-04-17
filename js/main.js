@@ -273,3 +273,33 @@ ScrollTrigger.create({
   once: true
 });
 // ДАНЯ: ФРЕЙМ 6 КОНЕЦ
+
+//ВИКА: седьмой фрейм
+//Код отправки данных на сервер
+
+const form = document.querySelector('.main__feedback__form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    const url = 'http://127.0.0.1:8000/enquires/';
+
+    fetch(url, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Сетевая ошибка');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Произошла проблема с вашим запросом:', error);
+    });
+});
