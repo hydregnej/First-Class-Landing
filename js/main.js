@@ -139,34 +139,55 @@ sliderItems.forEach(item => {
   });
 });
 
-addEventListener('DOMContentLoaded', () => {
-  gsap.to('.travel-examples-slider__heading-3', {
-    x: 0,
-    ease: "none"
-  })
-  gsap.to('.travel-examples-slider__paragraph', {
-    x: 0,
-    ease: "none",
-    delay: 0.1
-  })
-  gsap.to('.travel-examples-slider__item-japan', {
-    y: 0,
-    ease: "none",
-    opacity: 1,
-  })
-  gsap.to('.travel-examples-slider__item-india', {
-    y: 0,
-    ease: "none",
-    opacity: 1,
-    delay: 0.1,
-  })
-  gsap.to('.travel-examples-slider__item-china', {
-    y: 0,
-    ease: "none",
-    opacity: 1,
-    delay: 0.2,
-  })
-})
+document.addEventListener('DOMContentLoaded', () => {
+  // Получаем элемент, до которого нужно доскроллить
+  const frame = document.querySelector('.travel-examples-slider__container');
+  
+  // Добавляем слушатель события скролла
+  window.addEventListener('scroll', () => {
+    // Получаем позицию фрейма относительно верха страницы
+    const framePosition = frame.getBoundingClientRect().top;
+    
+    // Проверяем, достиг ли пользователь фрейма
+    if (framePosition < window.innerHeight) {
+      // Если достиг, запускаем вашу анимацию
+      gsap.to('.travel-examples-slider__heading-3', {
+        x: 0,
+        delay: .8,
+        ease: 'none',
+        duration: 1.3,
+      });
+      gsap.to('.travel-examples-slider__paragraph', {
+        x: 0,
+        ease: 'none',
+        delay: 1,
+        duration: 1.3,
+      });
+      gsap.to('.travel-examples-slider__item-japan', {
+        y: 0,
+        ease: 'none',
+        opacity: 1,
+        delay: .8,
+        duration: 1.3,
+      });
+      gsap.to('.travel-examples-slider__item-india', {
+        y: 0,
+        ease: 'none',
+        opacity: 1,
+        delay: 1,
+        duration: 1.3,
+      });
+      gsap.to('.travel-examples-slider__item-china', {
+        y: 0,
+        ease: 'none',
+        opacity: 1,
+        delay: 1,
+        duration: 1.3,
+      });
+    }
+  });
+});
+
 
 // ДАНЯ: ФРЕЙМ 5 НАЧАЛО
 document.querySelector('.js-main__want-here__button-prev').addEventListener('click', prevButton);
@@ -229,13 +250,13 @@ function animateInspiringStories() {
         const text = item.querySelector('.js-main__inspiring-stories__text');
         const color = item.querySelector('.js-main__inspiring-stories__color');
 
-        item.addEventListener('mouseover', function () {
+        item.addEventListener('mouseenter', function () {
           gsap.to(this, { duration: 0.3, scale: 1.1 });
           gsap.to(text, { duration: 0.3, bottom: '215px' });
           gsap.to(color, { duration: 0.3, height: '100%' });
         });
 
-        item.addEventListener('mouseout', function () {
+        item.addEventListener('mouseleave', function () {
           gsap.to(this, { duration: 0.3, scale: 1 });
           gsap.to(text, { duration: 0.3, bottom: '85px' });
           gsap.to(color, { duration: 0.3, height: '250px' });

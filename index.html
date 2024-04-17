@@ -30,6 +30,7 @@
       defer
     ></script>
     <script src="./js/slider.js" defer></script>
+    <script src="./js/gsap.js" defer></script>
   </head>
   <body>
     <!-- ВИКА: первый фрейм -->
@@ -573,15 +574,16 @@
                         class="main__feedback__form__input"
                       />
                       <input
-                        type="text"
-                        placeholder="Фамилия"
-                        class="main__feedback__form__input"
-                      />
+                      type="tel"
+                      placeholder="Телефон"
+                      class="main__feedback__form__input"
+                    />
+
                     </div>
                     <div class="main__feedback__form__user-inputs__right">
                       <input
-                        type="tel"
-                        placeholder="Телефон"
+                        type="text"
+                        placeholder="Фамилия"
                         class="main__feedback__form__input"
                       />
                       <div class="main__feedback__form__checkbox">
@@ -645,8 +647,11 @@
           </div>
         </div>
         <div class="footer__socials">
-          <a href="#"><img src="./icons/WhatsApp.svg" alt="WhatsApp"></a>
-          <a href="#"><img src="./icons/Instagram.svg" alt="Instagram"></a>
+          <div class="footer__socials-items">
+            <a href="#"><img src="./icons/WhatsApp.svg" alt="WhatsApp" class="footer__socials-icon"></a>
+            <a href="#"><img src="./icons/Instagram.svg" alt="Instagram" class="footer__socials-icon"></a>
+            <a href="#"><img src="./icons/telegram.svg" alt="Instagram" class="footer__socials-icon"></a>
+          </div>
           <span class="footer__copyright">Все данные защищены.</span>
         </div>
       </div>

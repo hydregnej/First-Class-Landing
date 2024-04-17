@@ -17,6 +17,7 @@ const swiperReviews = new Swiper(".reviews-slider__swiper", {
 
   pagination: {
     el: ".swiper-pagination",
+    clickable: true,
   },
 
   navigation: {
