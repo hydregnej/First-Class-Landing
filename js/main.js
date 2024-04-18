@@ -226,7 +226,8 @@ function animateInspiringStories() {
     });
 
     function animateTextAndColor() {
-      gsap.to('.js-main__inspiring-stories__text, .js-main__inspiring-stories__color', { opacity: 1, duration: 0.1 });
+      gsap.to('.js-main__inspiring-stories__text', { opacity: 1, duration: 1 });
+      gsap.to('.js-main__inspiring-stories__color', { opacity: 1, duration: 0.3 });
 
       items.forEach(function (item) {
         const text = item.querySelector('.js-main__inspiring-stories__text');
