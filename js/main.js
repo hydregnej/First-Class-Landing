@@ -88,7 +88,7 @@ function isElementInViewport(el, offset = 0) {
     rect.top >= -offset &&
     rect.left >= 0 &&
     rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) + offset &&
+    (window.innerHeight || document.documentElement.clientHeight) + offset &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
@@ -140,49 +140,53 @@ sliderItems.forEach(item => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Получаем элемент, до которого нужно доскроллить
   const frame = document.querySelector('.travel-examples-slider__container');
-  
-  // Добавляем слушатель события скролла
+
   window.addEventListener('scroll', () => {
-    // Получаем позицию фрейма относительно верха страницы
     const framePosition = frame.getBoundingClientRect().top;
-    
-    // Проверяем, достиг ли пользователь фрейма
+
     if (framePosition < window.innerHeight) {
-      // Если достиг, запускаем вашу анимацию
-      gsap.to('.travel-examples-slider__heading-3', {
+      gsap.to('.travel-examples-slider-button', {
+        opacity: 1,
         x: 0,
-        delay: .8,
+        delay: .7,
         ease: 'none',
-        duration: 1.3,
+        duration: .7,
+      });
+      gsap.to('.travel-examples-slider__heading-3', {
+        opacity: 1,
+        x: 0,
+        delay: .7,
+        ease: 'none',
+        duration: .7,
       });
       gsap.to('.travel-examples-slider__paragraph', {
+        opacity: 1,
         x: 0,
         ease: 'none',
-        delay: 1,
-        duration: 1.3,
+        delay: .9,
+        duration: .7,
       });
       gsap.to('.travel-examples-slider__item-japan', {
         y: 0,
         ease: 'none',
         opacity: 1,
-        delay: .8,
-        duration: 1.3,
+        delay: .7,
+        duration: .7,
       });
       gsap.to('.travel-examples-slider__item-india', {
         y: 0,
         ease: 'none',
         opacity: 1,
-        delay: 1,
-        duration: 1.3,
+        delay: .9,
+        duration: .7,
       });
       gsap.to('.travel-examples-slider__item-china', {
         y: 0,
         ease: 'none',
         opacity: 1,
-        delay: 1,
-        duration: 1.3,
+        delay: .9,
+        duration: .7,
       });
     }
   });
@@ -274,32 +278,65 @@ ScrollTrigger.create({
 });
 // ДАНЯ: ФРЕЙМ 6 КОНЕЦ
 
-//ВИКА: седьмой фрейм
 //Код отправки данных на сервер
+document.querySelector('.main__feedback__form').addEventListener('submit', function (event) {
+  console.log('ok')
+  event.preventDefault();
 
-const form = document.querySelector('.main__feedback__form');
+  let inputs = document.querySelectorAll('.main__feedback__form__input');
+  let formIsValid = true;
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+  inputs.forEach(inp => {
+    if (inp.value.trim() === '') {
+      inp.style.border = '1px solid red';
+      formIsValid = false;
+    } else {
+      inp.style.border = '';
+    }
+  });
 
-    const formData = new FormData(form);
-    
+  if (formIsValid) {
+    const formData = new FormData(this);
     const url = 'http://127.0.0.1:8000/enquires/';
 
     fetch(url, {
-        method: 'POST',
-        body: formData
+      method: 'POST',
+      body: formData
     })
-    .then(response => {
+      .then(response => {
         if (!response.ok) {
-            throw new Error('Сетевая ошибка');
+          throw new Error('Сетевая ошибка');
         }
         return response.json();
-    })
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => {
+      })
+      .then(data => {
+
+      })
+      .catch(error => {
         console.error('Произошла проблема с вашим запросом:', error);
+      });
+    showSuccessMessage()
+    inputs.forEach(inp => {
+      if (showSuccessMessage) {
+        inp.value = ''
+      }
     });
+  }
 });
+
+// сообщение об успешной отправке формы
+function showSuccessMessage() {
+  let successMessage = document.querySelector('.main__feedback__form-success-message')
+  successMessage.style.display = 'flex'
+
+  let bgDiv = document.createElement('div')
+  let footer = document.querySelector('.footer')
+
+  bgDiv.classList.add('main__feedback-background')
+  footer.appendChild(bgDiv)
+
+  document.querySelector('.main__feedback__form-success-message-close').addEventListener('click', () => {
+    successMessage.style.display = 'none'
+    footer.removeChild(bgDiv)
+  })
+}

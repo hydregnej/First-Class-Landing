@@ -9,7 +9,7 @@
    C:\Users\Иван\Documents\GitHub\First-Class-Landing\FirstClass\django_docker\venv>cd Scripts
    C:\Users\Иван\Documents\GitHub\First-Class-Landing\FirstClass\django_docker\venv\Scripts>activate
 
-5. Должна появиться преписка (venv)
+5. Должна появиться преписка (venv). для этого пишем source activate (если в gitbash)
 
 6. Далее с помощью двух cd.. возвращаемся до директроии django_docker
 
@@ -21,7 +21,7 @@
 
 9. В установке убраем галочку pgAdmin 4 и StackBuilder
 
-10. Далее в cmd в директории django_docker вводим: py manage.py runserver
+10. Далее в cmd в директории django_docker вводим: git 
     И ура сервер должен запуститься, можете проверить перейдя по ссылке 0.0.0.0:8000/enquires/
     Должна открыться странца с тем самым POST запросом.
 
