@@ -1,30 +1,16 @@
 // ВИКА: первый фрейм
 // анимация лого в хедере
 const headerLogo = document.querySelector(".header__logo");
-const newImageSrc = "./icons/logo-static.svg";
+const newImage = new Image();
+newImage.src = "./icons/logo-static.svg";
 
 function changeLogoToStatic() {
-  loadLogo(newImageSrc)
-    .then((loadedImage) => {
-      headerLogo.src = loadedImage.src;
-    })
-    .catch((error) => {
-      console.error("Ошибка загрузки лого:", error);
-    });
+  headerLogo.src = newImage.src;
 }
 
-function loadLogo(src) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve(img);
-    img.onerror = reject;
-    img.src = src;
-  });
-}
-
-setTimeout(() => {
+setTimeout(function () {
   changeLogoToStatic();
-}, 1000);
+}, 750);
 
 // анимация текста в первом фрейме
 const headingAnimationFirst = document.querySelector(".js-heading-first-move");
@@ -212,8 +198,6 @@ function prevButton() {
   }
 
   sliders[currentSlide].classList.add('js-main__want-here__active');
-
-  gsap.fromTo(document.querySelectorAll('.js-main__want-here__background'), { scale: 1 }, { scale: 1.1, duration: 1 });
 }
 
 function nextButton() {
@@ -225,8 +209,6 @@ function nextButton() {
   }
 
   sliders[currentSlide].classList.add('js-main__want-here__active');
-
-  gsap.fromTo(document.querySelectorAll('.js-main__want-here__background'), { scale: 1 }, { scale: 1.1, duration: 1 });
 }
 // ДАНЯ: ФРЕЙМ 5 КОНЕЦ
 
@@ -248,7 +230,8 @@ function animateInspiringStories() {
     });
 
     function animateTextAndColor() {
-      gsap.to('.js-main__inspiring-stories__text, .js-main__inspiring-stories__color', { opacity: 1, duration: 0.1 });
+      gsap.to('.js-main__inspiring-stories__text', { opacity: 1, duration: 1 });
+      gsap.to('.js-main__inspiring-stories__color', { opacity: 1, duration: 0.3 });
 
       items.forEach(function (item) {
         const text = item.querySelector('.js-main__inspiring-stories__text');

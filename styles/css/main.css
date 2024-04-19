@@ -515,11 +515,12 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -10;
+  animation: scaleAnimation 1s forwards;
 }
 
 .main__want-here__map {
@@ -568,6 +569,16 @@
 .main__want-here__button-next:hover {
   opacity: 0.5;
   cursor: pointer;
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 /* ДАНЯ: ФРЕЙМ 5 КОНЕЦ */
