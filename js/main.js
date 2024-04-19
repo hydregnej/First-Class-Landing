@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (framePosition < window.innerHeight) {
       gsap.to('.travel-examples-slider-button', {
-        opacity: 1,
         x: 0,
         delay: .7,
         ease: 'none',
