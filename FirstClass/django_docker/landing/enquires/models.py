@@ -2,8 +2,8 @@ from django.db import models
 
 class Enquires(models.Model):
     f_name = models.CharField(max_length=50, blank=False)             #Имя*
-    s_name = models.CharField(max_length=50, blank=False)             #Фамилия*
-    #email = models.EmailField(blank=False)                            #Почта*
+    #s_name = models.CharField(max_length=50, blank=False)             #Фамилия*
+    email = models.EmailField(blank=False)                            #Почта*
     phone = models.CharField(max_length=26, blank=False)              #Номер*
     #num_of_travelers = models.CharField(max_length=3, blank=False)    #Число путешественников*
     #continent = models.CharField(max_length=20, blank=False)          #Континент*
@@ -19,4 +19,4 @@ class Enquires(models.Model):
     sub_for_news = models.BooleanField(default=False)                 #Булево на рассылку новостей
 
     def __str__(self):
-        return f'{self.id} {self.f_name} {self.s_name}'
+        return f'{self.id} {self.f_name}'
