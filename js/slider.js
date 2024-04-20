@@ -9,6 +9,14 @@ const swiperTravelExamples = new Swiper(".travel-examples-slider-swiper", {
     nextEl: ".travel-examples-slider__next",
     prevEl: ".travel-examples-slider__prev",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+    },
+    769: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const swiperReviews = new Swiper(".reviews-slider__swiper", {
