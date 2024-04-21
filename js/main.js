@@ -4,7 +4,7 @@ if (window.innerWidth > 375) {
   const headerLogo = document.querySelector(".header__logo");
   const newImage = new Image();
   newImage.src = "./icons/logo-static.svg";
-  
+
   function changeLogoToStatic() {
     headerLogo.src = newImage.src;
   }
@@ -305,6 +305,9 @@ document.querySelector('.main__feedback__form').addEventListener('submit', funct
         inp.value = ''
       }
     });
+
+    let checkbox = document.querySelector('.main__feedback__form__checkbox__input')
+    checkbox.checked = false
   }
 });
 
