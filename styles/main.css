@@ -234,6 +234,10 @@
   width: 39%;
 }
 
+.main__why__reason-five__paragraph-two {
+  margin-top: 10px;
+}
+
 .main__why__reason-three {
   display: flex;
   flex-direction: column;
@@ -260,6 +264,7 @@
   font-weight: 500;
   line-height: 24px;
   text-align: left;
+  width: 117%;
 }
 
 .main__why__two-pandas {
@@ -1220,6 +1225,29 @@
 }
 
 @media (max-width: 375px) {
+  .header__container {
+    padding-top: 10px;
+  }
+
+  .header__logo{
+    width: 16px;
+  }
+
+  .header__nav-link {
+    font-size: 12px;
+  }
+
+  .header__nav {
+    gap: 25px;
+  }
+
+  .header__btn {
+    padding: 3px;
+    width: 73px;
+    font-size: 12px;
+    height: 25px;
+  }
+
   .heading-background-image {
     left: -580px;
     width: auto;
@@ -1229,18 +1257,124 @@
     font-size: 36px;
     line-height: 150%;
   }
+
   .js-heading-second-move {
     font-size: 36px;
     line-height: 150%;
   }
+
+  .section-heading__img-bg-anime-person {
+    left: -27vh;
+  }
+
   .section-heading__img-lantern {
     display: none;
   }
+
   .section-heading__img-leaves-big {
-    left: 0;
+    left: 95px;
+    bottom: 570px;
   }
+  
   .section-heading__img-leaves-small {
+    left: -20px;
+    bottom: 744px;
+  }
+
+  .main__why__heading {
+    font-size: 24px;
+  }
+
+  .main__why__two-pandas {
+    width: 85px;
+    height: 105px;
+    top: 20px;
+  } 
+
+  .main__why__one-panda {
+    width: 68px;
+    height: 90px;
+    left: 76px;
+    top: 73px;
+  }
+
+  .main__why__reasons-left-side {
+   
+  }
+
+  .main__why__reason-one {
+    top: 330px;
+    width: 55%;
+    line-height: 120%;
+  }
+
+  .main__why__reason-one__heading {
+    font-size: 14px;
+  }
+
+  .main__why__reason-one__paragraph {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .main__why__reason-two {
+    position: absolute;
+    left: 0;
+    top: 627px;
+    width: 60%;
+    font-weight: 600;
+  }
+
+  .main__why__reason-two__heading {
+    font-size: 14px;
+    width: 1%;
+  }
+
+  .main__why__reason-two__paragraph {
+    font-size: 12px;
+  }
+
+  .main__why__reason-three {
+    position: absolute;
+    top: 470px;
+    width: 66%;
+    left: 111px;
+    font-weight: 600;
+  }
+
+  .main__why__reason-three__heading {
+    font-size: 14px;
+  }
+
+  .main__why__reason-three__paragraph {
+    font-size: 12px;
+  }
+
+  .main__why__reasons-right-side {
     left: 0;
   }
 
+  .main__why__reason-four {
+    position: absolute;
+    left: 170px;
+    bottom: 0;
+    line-height: 90%;
+    font-weight: 600;
+  }
+
+  .main__why__reason-four__paragraph {
+    font-size: 14px;
+  }
+
+  .main__why__reason-five {
+    position: absolute;
+    width: 303px;
+    margin-top: 20px;
+    line-height: 120%;
+    font-weight: 600;
+  }
+
+  .main__why__reason-five__paragraph-two {
+    margin-top: 10px;
+  }
 }
