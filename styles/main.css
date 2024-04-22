@@ -1229,6 +1229,17 @@
     padding-top: 10px;
   }
 
+  .section-heading__h1 {
+    position: absolute;
+    left: 30px;
+    bottom: 75px;
+  }
+
+  .section-heading-text__flex-move {
+    left: 0;
+    bottom: -657px;
+  }
+
   .header__logo{
     width: 16px;
   }
@@ -1377,4 +1388,63 @@
   .main__why__reason-five__paragraph-two {
     margin-top: 10px;
   }
+
+  .main__want-here__heading {
+    font-size: 24px;
+  }
+
+  .main__want-here__text {
+    font-size: 20px;
+    bottom: 180px;
+  }
+
+  .main__want-here {
+    height: 416px;
+  }
+
+  .main__want-here__slide {
+    border-radius: 46px;
+    width: 150px;
+    height: 152px;
+    margin-top: 64px;
+  }
+
+  .main__want-here__map {
+    width: 115px;
+    height: 100px;
+    left: 123px;
+    margin-top: -15px;
+    position: absolute;
+  }
+
+  .main__want-here__map-europe {
+    margin-top: -8px;
+  }
+
+  .main__want-here__map-africa {
+    left: 118px;
+  }
+
+  .main__want-here__rout {
+    width: 42px;
+    height: 89px;
+    left: 179px;
+    top: 117px;
+  }
+
+  .main__want-here__button {
+    margin-top: 246px;
+  }
+
+  .main__want-here__button-prev {
+    width: 40px;
+    height: 40px;
+    margin-right: 245px;
+  }
+
+  .main__want-here__button-next {
+    width: 40px;
+    height: 40px;
+  }
+  
 }
