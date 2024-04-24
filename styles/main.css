@@ -193,7 +193,7 @@
   background-color: rgba(40, 57, 44, 1);
   left: 0;
   right: 0;
-  height: 100vh;
+  height: auto;
 }
 
 .main__why__heading {
