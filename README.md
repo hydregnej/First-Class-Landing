@@ -1,6 +1,8 @@
 # First Class
 
-### Ссылка на сайт
+<a href="https://hydregnej.github.io/First-Class-Landing/">
+  Ссылка на сайт
+</a>
 
 ## Описание
 
